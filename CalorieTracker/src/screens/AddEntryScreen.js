@@ -13,8 +13,6 @@ const AddEntryScreen = ({ navigation }) => {
     }
 
     const newEntryId = await addEntry({ description, calories: Number(calories) });
-    console.log('AddEntryScreen New Entry ID:', newEntryId);
-    Alert.alert('Add successful', 'Entry has been added successfully.');
     navigation.goBack();
   };
 

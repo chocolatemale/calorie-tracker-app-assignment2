@@ -29,7 +29,6 @@ const EditEntryScreen = ({ route, navigation }) => {
           text: 'Delete',
           onPress: async () => {
             await deleteEntry(id);
-            Alert.alert('Delete successful', 'Entry has been deleted successfully.');
             navigation.goBack();
           }
         }
@@ -50,7 +49,6 @@ const EditEntryScreen = ({ route, navigation }) => {
           text: 'Yes',
           onPress: async () => {
             await updateEntry(id, { reviewed: true });
-            Alert.alert('Marked as reviewed', 'Entry has been marked as reviewed.');
             navigation.goBack();
           }
         }
